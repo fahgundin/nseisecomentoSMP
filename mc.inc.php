@@ -56,7 +56,7 @@ try {
             width: 20px;
             height: 20px;
             margin-left: 500px;
-            margin-right: -460px;
+            margin-right: -440px;
             align-items: right;
         }
         borda{
