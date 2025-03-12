@@ -5,7 +5,7 @@ use xPaw\MinecraftQuery;
 use xPaw\MinecraftQueryException;
 
 $serverIP = "enx-soc-18.enx.host";
-$serverPort = 10090;
+$serverPort = 10090;    
 
 
 
@@ -25,6 +25,7 @@ try {
 ?>
 
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -33,29 +34,63 @@ try {
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Centralizar a tabela */
-        .center-table {
+        @font-face {
+            font-family: "Minecraft";
+            src: url('minecraft_font.tff');
+        }
+         
+         .center-table {
+            .center-table {
             margin: 0 auto;
-            width: 50%; /* Ajuste a largura conforme necessário */
+            width: 50%;
+           
+            padding: 10px;
+            background-color: black;
+            background-repeat: repeat;
+            background-size: 100px 50px;
+            
+        }
         }
         /* Estilo para o ícone */
         .icon {
             width: 20px;
             height: 20px;
-            margin-right: 10px;
+            margin-left: 500px;
+            margin-right: -460px;
+            align-items: right;
+        }
+        borda{
+            padding-bottom: 40px;
+            padding-top: 40px;
+        }
+        /* Estilo para a tabela */
+        table {
+            background-color: white; /* Fundo branco para a tabela */
+            width: 100%; /* Largura total */
+            background-size: cover;
+            
+        }
+        tbody{
+            margin-top: 40px;
+            font-family: "Minecraft";
         }
     </style>
 </head>
-<body>
-    <div class="container mt-5">
-        <h1 class="text-center mb-4"><img src = "src\naoseisecomento.png"></h1> <br>
-        <table class="table center-table">
-            
-            
-            <tbody  >
+<body background>
+    <div class="container mt-5" >
+        <h1 class="text-center mb-4" ><img src = "src\naoseisecomento.png"></h1> <br>
+        <div class="center-table" background = "borda.png">
+            <div class = "borda">
+            <table class="table" >
                 
-
-
+            
+                
+                
+                <tbody >
+                <tr>
+                        <td></td>
+                        <td></td>
+                </tr>
                 <?php
                 // Dados de exemplo (pode ser substituído por uma consulta ao banco de dados)
                 $MinecraftQuery = new MinecraftQuery(); 
@@ -77,7 +112,9 @@ try {
                 }
                 ?>
             </tbody>
+    
         </table>
+        </div>
     </div>
 
     <!-- Bootstrap JS (opcional, se precisar de funcionalidades JS) -->
