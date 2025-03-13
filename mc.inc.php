@@ -56,7 +56,7 @@ try {
             width: 20px;
             height: 20px;
             margin-left: 500px;
-            margin-right: -440px;
+            margin-right: -450px;
             align-items: right;
         }
         borda{
@@ -101,8 +101,10 @@ try {
                     $icon = "https://crafatar.com/avatars/8667ba71-b85a-4004-af54-457a9734eed7";
                     $url = "https://api.mojang.com/users/profiles/minecraft/".urlencode($player);
                     $response = file_get_contents($url);
-                    $data = json_decode($response,true);
-                    $icon = "https://crafatar.com/avatars/".urlencode($data['id']);
+                    if($response){
+                        $data = json_decode($response,true);
+                        $icon = "https://crafatar.com/avatars/".urlencode($data['id']);
+                    }
                     echo "
                     <tr>
                         <td><img src='$icon' class='icon' alt='Ícone'></td>
